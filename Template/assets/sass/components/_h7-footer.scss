@@ -1,0 +1,169 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START:  Footer CSS
+----------------------------------------*/
+.footer-7 {
+	position: relative;
+	z-index: 1;
+	.tj-blur-shape {
+		position: absolute;
+		top: -60%;
+		inset-inline-end: 20%;
+		width: 33vw;
+		aspect-ratio: 1/1;
+		border-radius: 50%;
+		background: linear-gradient(
+			120deg,
+			rgba(222, 26, 57, 1) 0%,
+			rgba(255, 173, 0, 1) 100%
+		);
+		opacity: 0.6 !important;
+		z-index: -1;
+		pointer-events: none;
+		@media #{$xxl,$xl,$lg,$md} {
+			top: -50%;
+			inset-inline-end: 10%;
+		}
+		@media #{$sm,$xs} {
+			top: -3%;
+			inset-inline-end: 5%;
+		}
+		&-2 {
+			top: inherit;
+			bottom: -50%;
+			inset-inline-start: 10%;
+			inset-inline-end: inherit;
+			width: 37vw;
+			@media #{$xxl,$xl,$lg,$md} {
+				bottom: -20%;
+			}
+			@media #{$sm,$xs} {
+				bottom: -3%;
+				inset-inline-start: 5%;
+			}
+		}
+	}
+	.h5 {
+		&_footer {
+			&_newsletter {
+				padding-bottom: 70px;
+				margin-bottom: 55px;
+				position: relative;
+				&::after {
+					content: "";
+					position: absolute;
+					bottom: 0;
+					inset-inline-start: -10%;
+					width: 200%;
+					height: auto;
+					border-bottom: 1px solid var(--tj-color-border-1);
+				}
+				.newsletter_title {
+					color: var(--tj-color-heading-primary);
+				}
+				.footer_subscription {
+					form {
+						input[type="email"] {
+							color: var(--tj-color-text-body);
+							background-color: var(--tj-color-theme-bg);
+							&::placeholder {
+								color: var(--tj-color-text-body-2);
+							}
+						}
+					}
+				}
+				@media #{$md} {
+					padding-bottom: 60px;
+					margin-bottom: 45px;
+				}
+				@media #{$sm,$xs} {
+					padding-bottom: 50px;
+					margin-bottom: 30px;
+				}
+			}
+			&_widgets {
+				&_wrap {
+					.tj_footer_widget {
+						.widget_title {
+							> span {
+								color: var(--tj-color-text-body-2);
+							}
+						}
+						&.widget-nav-menu ul li {
+							&:not(:last-child) {
+								margin-bottom: 4px;
+							}
+							> a {
+								font-size: 20px;
+								line-height: 1.6;
+								color: var(--tj-color-heading-primary);
+								&:hover {
+									color: var(--tj-color-theme-primary);
+								}
+							}
+						}
+						.tj_contact {
+							.contact_info {
+								color: var(--tj-color-heading-primary);
+							}
+							a.contact_info {
+								&:hover {
+									color: var(--tj-color-theme-primary);
+								}
+							}
+						}
+						.footer_socials_list {
+							border-bottom: 1px solid var(--tj-color-border-1);
+						}
+						.footer_socials_item {
+							border-color: var(--tj-color-border-1);
+
+							.tj_icon_btn {
+								color: var(--tj-color-heading-primary);
+								.icon_btn {
+									> span i {
+										color: var(--tj-color-heading-primary);
+									}
+								}
+								&:hover {
+									.icon_btn {
+										> span i {
+											color: var(--tj-color-theme-primary);
+										}
+									}
+								}
+							}
+							&:hover {
+								.tj_icon_btn {
+									color: var(--tj-color-theme-primary);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.h4_footer_bottom {
+		border-color: var(--tj-color-border-1);
+		.tj_footer_nav ul li > a {
+			&:not(:hover) {
+				color: var(--tj-color-text-body);
+			}
+		}
+		.tj_copyright {
+			color: var(--tj-color-text-body);
+			a {
+				&:not(:hover) {
+					color: var(--tj-color-heading-primary);
+				}
+			}
+		}
+		.tj_back_to_top {
+			color: var(--tj-color-text-body);
+		}
+	}
+}
+
+/* !END:  Footer CSS */

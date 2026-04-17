@@ -1,0 +1,216 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Blog CSS
+----------------------------------------*/
+.h7 {
+	&-blog-section {
+		padding-top: 160px;
+		padding-bottom: 160px;
+
+		@media #{$xl} {
+			padding-top: 130px;
+			padding-bottom: 130px;
+		}
+		@media #{$lg} {
+			padding-top: 110px;
+			padding-bottom: 110px;
+		}
+		@media #{$md} {
+			padding-top: 90px;
+			padding-bottom: 90px;
+		}
+		@media #{$sm,$xs} {
+			padding-top: 70px;
+			padding-bottom: 70px;
+		}
+	}
+	&_blog {
+		&_header {
+			margin-bottom: 95px;
+			.section_heading {
+				max-width: 750px;
+				width: 100%;
+				@media #{$xl,$lg} {
+					max-width: 600px;
+				}
+			}
+			.sec_subtitle {
+				> span {
+					color: var(--tj-color-light-1);
+				}
+			}
+			.sec_heading_right {
+				margin-bottom: 15px;
+				@media #{$xl,$lg} {
+					margin-bottom: 12px;
+				}
+			}
+			@media #{$lg,$md} {
+				margin-bottom: 60px;
+			}
+			@media #{$sm,$xs} {
+				margin-bottom: 40px;
+			}
+		}
+		&_item {
+			&.tj_blog_item {
+				display: block;
+				position: relative;
+				padding: 0;
+				border-color: var(--tj-color-border-3);
+				&:first-child {
+					border-top: 1px solid var(--tj-color-border-3);
+				}
+				@media #{$sm,$xs} {
+					flex-wrap: wrap;
+				}
+				.blog {
+					&_meta_item {
+						color: var(--tj-color-light-1);
+						a {
+							color: var(--tj-color-light-1);
+							padding: 0;
+							border: 0;
+							&:hover {
+								color: var(--tj-color-theme-primary);
+								background-color: transparent;
+							}
+						}
+						&:not(:first-child) {
+							&::before {
+								background-color: var(--tj-color-border-3);
+							}
+						}
+					}
+					&_image {
+						max-width: 354px;
+						width: 100%;
+						aspect-ratio: 354/387;
+						position: absolute;
+						top: 50%;
+						inset-inline-end: 36%;
+						transform: translateY(-50%);
+						opacity: 0;
+						visibility: hidden;
+						margin-bottom: 0;
+						img {
+							object-fit: cover;
+						}
+						@media #{$xxl} {
+							max-width: 280px;
+							inset-inline-end: 39%;
+						}
+						@media #{$xl} {
+							max-width: 254px;
+						}
+						@media #{$lg} {
+							max-width: 300px;
+						}
+						@media #{$md,$sm,$xs} {
+							position: unset;
+							max-width: 100%;
+							aspect-ratio: 427/285;
+							opacity: 1;
+							visibility: visible;
+							transform: none;
+							margin-top: 40px;
+						}
+					}
+					&_title {
+						font-size: 40px;
+						line-height: 1.25;
+						color: var(--tj-color-light-1);
+						a {
+							background-image: linear-gradient(
+								to bottom,
+								currentColor 0%,
+								currentColor 100%
+							);
+							background-size: 0 2px;
+							background-repeat: no-repeat;
+							background-position: 0 88%;
+							display: inline;
+						}
+						@media #{$xxl,$xl,$md} {
+							font-size: 30px;
+						}
+						@media #{$lg} {
+							font-size: 32px;
+						}
+						@media #{$sm,$xs} {
+							font-size: 28px;
+						}
+					}
+					&_btn {
+						margin-top: 27px;
+					}
+
+					&_content {
+						padding: 50px 0;
+						display: flex;
+						flex-wrap: wrap;
+						gap: 20px;
+						justify-content: space-between;
+						transition: all 0.4s ease-in-out;
+						&_left {
+							max-width: 650px;
+							width: 100%;
+							@media #{$xxl,$lg} {
+								max-width: 490px;
+							}
+							@media #{$xl} {
+								max-width: 470px;
+							}
+						}
+						@media #{$xl} {
+							padding: 40px 0;
+						}
+						@media #{$lg,$md} {
+							padding: 35px 0;
+						}
+						@media #{$sm,$xs} {
+							padding: 30px 0;
+						}
+						@media #{$sm,$xs} {
+							border-inline-start-width: 1px;
+							border-top-width: 0;
+							width: 100%;
+						}
+					}
+					&_desc {
+						font-size: 18px;
+						line-height: 1.55;
+						color: var(--tj-color-light-2);
+						max-width: 519px;
+						width: 100%;
+						p {
+							&:last-child {
+								margin-bottom: 0;
+							}
+						}
+						@media #{$xxl} {
+							max-width: 490px;
+						}
+						@media #{$xl} {
+							max-width: 400px;
+						}
+					}
+				}
+				&:hover {
+					.blog_title {
+						a {
+							background-size: 100% 2px;
+						}
+					}
+					.blog_image {
+						opacity: 1;
+						visibility: visible;
+					}
+				}
+			}
+		}
+	}
+}
+
+// END: Blog CSS

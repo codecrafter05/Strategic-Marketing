@@ -1,0 +1,45 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Client CSS
+----------------------------------------*/
+.h7 {
+	&-client-section {
+		padding-top: 120px;
+		padding-bottom: 120px;
+		@media #{$lg} {
+			padding-top: 100px;
+			padding-bottom: 100px;
+		}
+		@media #{$md,$sm,$xs} {
+			padding-top: 90px;
+			padding-bottom: 90px;
+		}
+		@media #{$sm,$xs} {
+			padding-top: 70px;
+			padding-bottom: 70px;
+		}
+	}
+	&_client {
+		&_wrapper {
+			.section_heading {
+				margin-bottom: 52px;
+				@media #{$sm,$xs} {
+					margin-bottom: 40px;
+				}
+			}
+			.sec_subtitle {
+				> span {
+					color: var(--tj-color-light-1);
+				}
+			}
+		}
+		&_slider_wrap {
+			.tj_client_item {
+				background-color: var(--tj-color-border-3);
+			}
+		}
+	}
+}
+
+/* !END: Client CSS */

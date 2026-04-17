@@ -1,0 +1,83 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Header CSS
+----------------------------------------*/
+
+// Other headers
+.header {
+	&-7 {
+		padding-top: 0;
+		padding-bottom: 0;
+		.site_logo {
+			padding: 33px 0;
+		}
+		.tj-header {
+			&_right {
+				align-items: center;
+				.tj_btn {
+					background-color: var(--tj-color-theme-primary);
+					border-radius: 50px;
+					overflow: hidden;
+					gap: 10px;
+					&::before {
+						background-color: var(--tj-color-theme-bg-dark);
+					}
+					.flip-text .front {
+						color: var(--tj-color-light-1);
+					}
+				}
+			}
+		}
+		.site_navigation {
+			nav {
+				background-color: transparent;
+				padding: 0;
+				ul {
+					&:not(.sub-menu) {
+						> li {
+							> a {
+								padding-top: 42px;
+								padding-bottom: 42px;
+							}
+							&.menu-item-has-children,
+							&.has-dropdown {
+								> a {
+									&::after {
+										top: 54px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.tj_sidebar_toggle_4 {
+	width: 46px;
+	height: 46px;
+	border-radius: 50%;
+	padding: 12px;
+	border: 1px solid var(--tj-color-border-1);
+	background-color: transparent;
+	color: var(--tj-color-heading-primary);
+	display: flex;
+	> span {
+		width: auto;
+		height: auto;
+		font-size: 24px;
+		background-color: transparent;
+		transition: all 0.4s;
+	}
+
+	&:hover {
+		color: var(--tj-color-theme-primary);
+		&:not(.on) > span {
+			animation: none;
+		}
+	}
+}
+/* !END: Header CSS */

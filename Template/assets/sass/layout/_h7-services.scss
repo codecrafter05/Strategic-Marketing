@@ -1,0 +1,155 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Service CSS
+----------------------------------------*/
+
+.h7 {
+	&-service {
+		&-section {
+			padding-top: 160px;
+			padding-bottom: 155px;
+			@media #{$xxl,$xl} {
+				padding-top: 130px;
+				padding-bottom: 130px;
+			}
+			@media #{$lg} {
+				padding-top: 110px;
+				padding-bottom: 110px;
+			}
+			@media #{$md} {
+				padding-top: 90px;
+				padding-bottom: 90px;
+			}
+			@media #{$sm, $xs} {
+				padding-top: 70px;
+				padding-bottom: 70px;
+			}
+		}
+		&-header {
+			margin-bottom: 65px;
+			@media #{$md} {
+				margin-bottom: 50px;
+			}
+			@media #{$sm,$xs} {
+				margin-bottom: 40px;
+			}
+
+			.section_heading {
+				max-width: 500px;
+				width: 100%;
+				.sec_subtitle > span {
+					color: var(--tj-color-light-1);
+				}
+				.sec_title {
+					color: var(--tj-color-light-1);
+				}
+			}
+			.sec_heading_right {
+				margin-bottom: 40px;
+			}
+		}
+
+		&-item {
+			border: 1px solid var(--tj-color-border-3);
+			padding: 50px 30px 45px;
+			position: relative;
+			overflow: hidden;
+			z-index: 1;
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				inset-inline-start: auto;
+				inset-inline-end: 0;
+				width: 0;
+				height: 100%;
+				background-color: var(--tj-color-border-3);
+				@include transition(all 0.3s ease-in-out 0s);
+				z-index: -1;
+			}
+
+			.service-icon {
+				font-size: 40px;
+				line-height: 1;
+				color: var(--tj-color-theme-primary);
+				transition: all 0.3s ease-in-out;
+				i {
+					display: inline-flex;
+					line-height: 1;
+				}
+				@media #{$xl,$lg,$md} {
+					font-size: 36px;
+				}
+
+				@media #{$sm,$xs} {
+					font-size: 30px;
+				}
+			}
+			&:hover {
+				&::before {
+					width: 100%;
+					inset-inline-start: 0;
+					inset-inline-end: auto;
+				}
+				.service-icon {
+					i {
+						animation: inOut 0.4s ease-in-out;
+					}
+				}
+			}
+			@media #{$lg,$md} {
+				padding: 40px 20px;
+			}
+			@media #{$sm,$xs} {
+				padding: 30px 15px;
+			}
+		}
+
+		&-content {
+			padding-top: 160px;
+			.service-title {
+				margin-bottom: 18px;
+				color: var(--tj-color-light-1);
+
+				a {
+					&:hover {
+						color: var(--tj-color-theme-primary);
+					}
+				}
+
+				@media #{$sm,$xs} {
+					margin-bottom: 10px;
+				}
+				@media #{$lg} {
+					font-size: 26px;
+				}
+				@media #{$sm} {
+					font-size: 24px;
+				}
+				@media #{$xs} {
+					font-size: 22px;
+				}
+			}
+			.service-desc {
+				font-size: 18px;
+				margin-bottom: 0;
+				color: var(--tj-color-light-2);
+				@media #{$sm,$xs} {
+					font-size: 16px;
+				}
+			}
+			@media #{$xxl,$md} {
+				padding-top: 100px;
+			}
+			@media #{$xl,$lg} {
+				padding-top: 80px;
+			}
+			@media #{$sm,$xs} {
+				padding-top: 50px;
+			}
+		}
+	}
+}
+
+/* !END: Service CSS */

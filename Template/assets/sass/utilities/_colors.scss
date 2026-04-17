@@ -1,0 +1,53 @@
+$colors: (
+	common: (
+		white: #ffffff,
+		black: #000000,
+	),
+	heading: (
+		primary: #0c0c0c,
+	),
+	text: (
+		body: #333333,
+		body-2: #707070,
+	),
+	theme: (
+		primary: #de1a39,
+		bg: #fcf5ea,
+		bg-2: #ede5d8,
+		bg-3: #0c0c0c99,
+		bg-dark: #0c0c0c,
+		bg-dark-2: #333333,
+		bg-dark-3: #707070,
+		bg-dark-4: #0c0c0c40,
+		bg-dark-5: #3333338c,
+		bg-dark-6: #161515,
+		bg-dark-7: #040404,
+	),
+	light: (
+		1: #fcf8f0,
+		2: #bdb9b3,
+		3: #999691,
+		4: #fcf5ea80,
+		5: #fcf8f0cc,
+	),
+	grey: (
+		1: #c5c5c5,
+		2: #1a1a19,
+		3: #fcf5ea0f,
+		4: #1d1c1c,
+		5: #191919,
+		6: #fcf8f00f,
+	),
+	border: (
+		1: #e0dad1,
+		2: #dbd5cc,
+		3: #292826,
+		4: #fcf8f01f,
+		5: #e0dad11a,
+		6: #fcf8f01a,
+	),
+	gradient: (
+		1: linear-gradient(rgba(12, 12, 12, 0) 0%, rgba(12, 12, 12, 1) 100%),
+		2: linear-gradient(rgba(12, 12, 12, 0) 50%, rgba(12, 12, 12, 1) 80%),
+	),
+);
