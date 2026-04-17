@@ -5,4 +5,4 @@ Thumbs.db
 .env.*
 !.env.example
 node_modules/
-Template/.venv-font/
+.venv-font/
